@@ -1,0 +1,12 @@
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\bin\Debug\BLL.dll
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\bin\Debug\BLL.pdb
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\bin\Debug\DAL.dll
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\bin\Debug\DTO.dll
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\bin\Debug\DAL.pdb
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\bin\Debug\DTO.pdb
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\bin\Debug\DTO.dll.config
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\obj\Debug\BLL.dll
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\obj\Debug\BLL.pdb

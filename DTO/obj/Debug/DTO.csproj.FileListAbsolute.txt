@@ -1,0 +1,7 @@
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\DTO\bin\Debug\DTO.dll.config
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\DTO\bin\Debug\DTO.dll
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\DTO\bin\Debug\DTO.pdb
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\DTO\obj\Debug\DTO.dll
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\DTO\obj\Debug\DTO.pdb
