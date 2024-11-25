@@ -10,3 +10,15 @@ D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\obj\Debug\BLL.csproj.CoreComp
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\obj\Debug\BLL.dll
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\BLL\obj\Debug\BLL.pdb
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\BLL\bin\Debug\BLL.dll
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\BLL\bin\Debug\BLL.pdb
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\BLL\bin\Debug\DAL.dll
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\BLL\bin\Debug\DTO.dll
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\BLL\bin\Debug\DAL.pdb
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\BLL\bin\Debug\DTO.pdb
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\BLL\bin\Debug\DTO.dll.config
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\BLL\obj\Debug\BLL.dll
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\BLL\obj\Debug\BLL.pdb

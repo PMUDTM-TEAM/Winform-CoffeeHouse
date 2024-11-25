@@ -8,3 +8,13 @@ D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\DAL\obj\Debug\DAL.csproj.CoreComp
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\DAL\obj\Debug\DAL.dll
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\DAL\obj\Debug\DAL.pdb
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\DAL\bin\Debug\DAL.dll
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\DAL\bin\Debug\DAL.pdb
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\DAL\bin\Debug\DTO.dll
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\DAL\bin\Debug\DTO.pdb
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\DAL\bin\Debug\DTO.dll.config
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\DAL\obj\Debug\DAL.dll
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\DAL\obj\Debug\DAL.pdb
