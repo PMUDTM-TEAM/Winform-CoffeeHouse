@@ -50,5 +50,86 @@ namespace DAL
                 return false;
             }
         }
+
+        public bool deleteProduct(int pro_id)
+        {
+            try
+            {
+                Product productToDelete = db.Products.FirstOrDefault(p => p.Id == pro_id);
+
+                if (productToDelete == null)
+                {
+                    Console.WriteLine("Không tìm thấy sản phẩm cần xóa.");
+                    return false;
+                }
+
+                db.Products.DeleteOnSubmit(productToDelete);
+
+
+                db.SubmitChanges();
+
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"Lỗi khi xóa sản phẩm: {ex.Message}");
+
+                return false;
+            }
+        }
+
+        public bool updateProduct(int id,string name, string slug,string type,int cate_id, string image)
+        {
+            try
+            {
+               
+                Product productFromDb = db.Products.FirstOrDefault(p => p.Id == id);
+
+                
+                if (productFromDb == null)
+                {
+                    Console.WriteLine("Không tìm thấy sản phẩm với id " + id);
+                    return false;
+                }
+
+               
+                if (!string.IsNullOrEmpty(name))
+                {
+                    productFromDb.Name = name;
+                }
+
+                if (!string.IsNullOrEmpty(slug))
+                {
+                    productFromDb.Slug = slug;
+                }
+
+                if (cate_id > 0) 
+                {
+                    productFromDb.Cate_Id = cate_id;
+                }
+
+                if (!string.IsNullOrEmpty(image))
+                {
+                    productFromDb.Image = image;
+                }
+
+                if (!string.IsNullOrEmpty(type))
+                {
+                    productFromDb.Type = type;
+                }
+
+                db.SubmitChanges();
+
+                Console.WriteLine("Cập nhật sản phẩm thành công.");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi khi cập nhật sản phẩm: {ex.Message}");
+                return false;
+            }
+        }
     }
 }

@@ -37,7 +37,7 @@
             this.panelHeader = new System.Windows.Forms.Panel();
             this.lblInfoSidebar = new System.Windows.Forms.Label();
             this.btnManageWorkTime = new Guna.UI2.WinForms.Guna2Button();
-            this.btnManageMenu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnManageProduct = new Guna.UI2.WinForms.Guna2Button();
             this.lblMethodSidebar = new System.Windows.Forms.Label();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblInfoID = new System.Windows.Forms.Label();
@@ -48,8 +48,8 @@
             this.btnReport = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panelSidebar = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel_container = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel_container = new System.Windows.Forms.Panel();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.panelHeader.SuspendLayout();
@@ -179,29 +179,30 @@
             this.btnManageWorkTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnManageWorkTime.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // btnManageMenu
+            // btnManageProduct
             // 
-            this.btnManageMenu.Animated = true;
-            this.btnManageMenu.BorderColor = System.Drawing.Color.Transparent;
-            this.btnManageMenu.BorderRadius = 10;
-            this.btnManageMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnManageMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnManageMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnManageMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnManageMenu.FillColor = System.Drawing.Color.Transparent;
-            this.btnManageMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageMenu.ForeColor = System.Drawing.Color.DimGray;
-            this.btnManageMenu.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnManageMenu.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btnManageMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnManageMenu.Image")));
-            this.btnManageMenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnManageMenu.Location = new System.Drawing.Point(0, 436);
-            this.btnManageMenu.Name = "btnManageMenu";
-            this.btnManageMenu.Size = new System.Drawing.Size(234, 68);
-            this.btnManageMenu.TabIndex = 10;
-            this.btnManageMenu.Text = "Quản lý menu";
-            this.btnManageMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnManageMenu.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnManageProduct.Animated = true;
+            this.btnManageProduct.BorderColor = System.Drawing.Color.Transparent;
+            this.btnManageProduct.BorderRadius = 10;
+            this.btnManageProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageProduct.FillColor = System.Drawing.Color.Transparent;
+            this.btnManageProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageProduct.ForeColor = System.Drawing.Color.DimGray;
+            this.btnManageProduct.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnManageProduct.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnManageProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnManageProduct.Image")));
+            this.btnManageProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageProduct.Location = new System.Drawing.Point(0, 436);
+            this.btnManageProduct.Name = "btnManageProduct";
+            this.btnManageProduct.Size = new System.Drawing.Size(234, 68);
+            this.btnManageProduct.TabIndex = 10;
+            this.btnManageProduct.Text = "Quản lý sản phẩm";
+            this.btnManageProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageProduct.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnManageProduct.Click += new System.EventHandler(this.btnManageProduct_Click);
             // 
             // lblMethodSidebar
             // 
@@ -375,7 +376,7 @@
             this.panelSidebar.Controls.Add(this.lblInfoID);
             this.panelSidebar.Controls.Add(this.guna2PictureBox4);
             this.panelSidebar.Controls.Add(this.lblMethodSidebar);
-            this.panelSidebar.Controls.Add(this.btnManageMenu);
+            this.panelSidebar.Controls.Add(this.btnManageProduct);
             this.panelSidebar.Controls.Add(this.btnManageWorkTime);
             this.panelSidebar.Controls.Add(this.lblInfoSidebar);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -383,16 +384,6 @@
             this.panelSidebar.Name = "panelSidebar";
             this.panelSidebar.Size = new System.Drawing.Size(314, 915);
             this.panelSidebar.TabIndex = 10;
-            // 
-            // panel_container
-            // 
-            this.panel_container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.panel_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_container.Location = new System.Drawing.Point(314, 71);
-            this.panel_container.Margin = new System.Windows.Forms.Padding(4);
-            this.panel_container.Name = "panel_container";
-            this.panel_container.Size = new System.Drawing.Size(1057, 915);
-            this.panel_container.TabIndex = 12;
             // 
             // guna2Button1
             // 
@@ -417,6 +408,16 @@
             this.guna2Button1.Text = "Quản lý hoá đơn";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // panel_container
+            // 
+            this.panel_container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.panel_container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_container.Location = new System.Drawing.Point(314, 71);
+            this.panel_container.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_container.Name = "panel_container";
+            this.panel_container.Size = new System.Drawing.Size(1057, 915);
+            this.panel_container.TabIndex = 12;
             // 
             // guna2ContextMenuStrip1
             // 
@@ -465,7 +466,7 @@
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Label lblInfoSidebar;
         private Guna.UI2.WinForms.Guna2Button btnManageWorkTime;
-        private Guna.UI2.WinForms.Guna2Button btnManageMenu;
+        private Guna.UI2.WinForms.Guna2Button btnManageProduct;
         private System.Windows.Forms.Label lblMethodSidebar;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private System.Windows.Forms.Label lblInfoID;

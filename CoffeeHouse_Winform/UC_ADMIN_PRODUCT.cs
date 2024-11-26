@@ -78,6 +78,28 @@ namespace CoffeeHouse_Winform
 
         }
 
+        // Hàm dùng close các button khác khi thêm mới
+        public void closeBtnWhenInsert()
+        {
+            btnDelete.Enabled=false;
+            btnEdit.Enabled=false;
+        }
+
+        // Hàm dùng close các button khác khi đang sửa
+        public void closeBtnWhenUpdate()
+        {
+            btnDelete.Enabled = false;
+            btnCreate.Enabled = false;
+        }
+
+        // Hàm mở các button thực hiện chức năng
+        public void openBtn()
+        {
+            btnDelete.Enabled=true;
+            btnCreate.Enabled=true;
+            btnEdit.Enabled =true;
+        }
+
         // Hàm đóng tất cả các component
         public void closeComponent()
         {
@@ -195,6 +217,9 @@ namespace CoffeeHouse_Winform
         // Biến toàn cục đường dẫn ảnh tải lên
         private string imagePath = "";
 
+        // Biến toàn cục đường dẫn đến Web
+        private string webImagePath = "D:\\HK7\\Ứng dụng thông minh\\Đồ án\\Web\\Web-CoffeeHouse\\CoffeeHouse\\wwwroot\\imgs";
+
         // Sự kiện nút up ảnh lên
         private void btnImage_Click(object sender, EventArgs e)
         {
@@ -246,6 +271,7 @@ namespace CoffeeHouse_Winform
         {
             clearInfor();
             closeComponent();
+            openBtn();
         }
 
         // Sự kiện nút reset thông tin
@@ -258,6 +284,7 @@ namespace CoffeeHouse_Winform
         private void btnCreate_Click(object sender, EventArgs e)
         {
             openComponentForInsert();
+            closeBtnWhenInsert();
         }
 
         // Sự kiện click vào dgDSSP
@@ -289,6 +316,70 @@ namespace CoffeeHouse_Winform
                         break;
                     }
                 }
+            }
+        }
+
+        // Sự kiện thêm ảnh vào trong các folder
+        public void upImageToFolders(string imageName)
+        {
+            // Đảm bảo lấy đúng thư mục gốc của dự án
+            string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            string imageDirectory = Path.Combine(projectDirectory, "Images");
+
+            // Lấy trong bin đang chạy
+            string projectDirectoryBin = AppDomain.CurrentDomain.BaseDirectory;
+            string imageDirectoryBin = Path.Combine(projectDirectoryBin, "Images");
+
+            // Kiểm tra nếu thư mục Images chưa tồn tại, tạo mới
+            if (!Directory.Exists(imageDirectory))
+            {
+                Directory.CreateDirectory(imageDirectory);
+            }
+
+            if (!Directory.Exists(imageDirectoryBin))
+            {
+                Directory.CreateDirectory(imageDirectoryBin);
+            }
+            if (!Directory.Exists(webImagePath))
+            {
+                Directory.CreateDirectory(webImagePath);
+            }
+
+            // Đường dẫn đầy đủ của ảnh sao chép
+            string destinationImagePath = Path.Combine(imageDirectory, imageName);
+            string destinationImagePathBin = Path.Combine(imageDirectoryBin, imageName);
+            string destinationImagePathWeb = Path.Combine(webImagePath, imageName);
+            try
+            {
+                // Kiểm tra xem ảnh có tồn tại không, nếu có thì xóa đi
+                if (File.Exists(destinationImagePath))
+                {
+                    File.Delete(destinationImagePath);
+                }
+                if (File.Exists(destinationImagePathBin))
+                {
+                    File.Delete(destinationImagePathBin);
+                }
+                if (File.Exists(destinationImagePathWeb))
+                {
+                    File.Delete(destinationImagePathWeb);
+                }
+
+                // Sao chép ảnh vào thư mục Images
+                File.Copy(imagePath, destinationImagePath);
+                File.Copy(imagePath, destinationImagePathBin);
+                File.Copy(imagePath, destinationImagePathWeb);
+
+                loadList();
+                clearInfor();
+                closeComponent();
+                openBtn();
+                MessageBox.Show("Sản phẩm và ảnh đã được lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Có lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -326,59 +417,129 @@ namespace CoffeeHouse_Winform
             bool checkSuccess=pro.insertProduct(product);
             if(checkSuccess)
             {
-                // Đảm bảo lấy đúng thư mục gốc của dự án
-                string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-                string imageDirectory = Path.Combine(projectDirectory, "Images");
-
-                // Lấy trong bin đang chạy
-                string projectDirectoryBin = AppDomain.CurrentDomain.BaseDirectory;
-                string imageDirectoryBin = Path.Combine(projectDirectoryBin, "Images");
-
-                // Kiểm tra nếu thư mục Images chưa tồn tại, tạo mới
-                if (!Directory.Exists(imageDirectory))
-                {
-                    Directory.CreateDirectory(imageDirectory);
-                }
-
-                if (!Directory.Exists(imageDirectoryBin))
-                {
-                    Directory.CreateDirectory(imageDirectoryBin);
-                }
-
-                // Đường dẫn đầy đủ của ảnh sao chép
-                string destinationImagePath = Path.Combine(imageDirectory, imageName);
-                string destinationImagePathBin = Path.Combine(imageDirectoryBin, imageName);
-
-                try
-                {
-                    // Kiểm tra xem ảnh có tồn tại không, nếu có thì xóa đi
-                    if (File.Exists(destinationImagePath))
-                    {
-                        File.Delete(destinationImagePath);
-                    }
-                    if (File.Exists(destinationImagePathBin))
-                    {
-                        File.Delete(destinationImagePathBin);
-                    }
-
-                    // Sao chép ảnh vào thư mục Images
-                    File.Copy(imagePath, destinationImagePath);
-                    File.Copy(imagePath, destinationImagePathBin);
-                    loadList();
-                    clearInfor();
-                    closeComponent();   
-                    MessageBox.Show("Sản phẩm và ảnh đã được lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    
-                    MessageBox.Show("Có lỗi khi lưu ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                upImageToFolders(imageName);
             }
             else
             {
                 MessageBox.Show("Thêm lỗi vui lòng kiểm tra lại !");
             }    
+        }
+
+        // Hàm của btnDelete dùng xóa sản phẩm
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgDSSP.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm trong danh sách để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+           
+            DataGridViewRow selectedRow = dgDSSP.SelectedRows[0];
+            string productName = selectedRow.Cells["ProName"].Value.ToString();
+            int Id = int.Parse(selectedRow.Cells["Id"].Value.ToString());
+            
+            
+            DialogResult result = MessageBox.Show($"Bạn có chắc muốn xóa sản phẩm: {productName}?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+               
+                try
+                {
+                    bool isDeleted = pro.deleteProduct(Id);
+
+                    if (isDeleted)
+                    {
+                        MessageBox.Show($"Sản phẩm {productName} đã được xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearInfor();
+                        loadList();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Không thể xóa sản phẩm {productName}. Vui lòng thử lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Có lỗi xảy ra khi xóa sản phẩm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        // Hàm của btnEdit dùng để kích hoạt các component update
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (dgDSSP.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm trong danh sách để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            closeBtnWhenUpdate();
+            openComponentForUpdate();
+        }
+
+        // Hàm của btnFix dùng để cập nhật sản phẩm
+        private void btnfix_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = dgDSSP.SelectedRows[0];
+            string name = txtName.Text;
+            int id = int.Parse(selectedRow.Cells["Id"].Value.ToString());
+            string slug = "";
+            if (!string.IsNullOrEmpty(name))
+            {
+                 slug = ToSlug(name);
+            }    
+            
+            string type = cboType.SelectedItem.ToString();
+            int cate_id = int.Parse(cboCate.SelectedValue.ToString());
+            string image = imagePath;
+
+            string imageName = "";
+            if (!string.IsNullOrEmpty(image))
+            {
+                imageName = Path.GetFileName(imagePath);
+            }
+           
+
+            DialogResult result = MessageBox.Show($"Bạn có chắc muốn sửa sản phẩm: {name}?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+
+                try
+                {
+                    bool isUpdate = pro.updateProduct(id,name,slug,type,cate_id,imageName);
+
+                    if (isUpdate)
+                    {
+                        if(!string.IsNullOrEmpty(imageName))
+                        {
+                            upImageToFolders(imageName);
+                        }
+                       
+                        else
+                        {
+                            openBtn();
+                            loadList();
+                            closeComponent();
+                            clearInfor();
+                            MessageBox.Show($"Sản phẩm {name} đã được lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }    
+
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Không thể cập nhật sản phẩm {name}. Vui lòng thử lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Có lỗi xảy ra khi xóa sản phẩm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+
         }
     }
 }

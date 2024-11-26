@@ -19,5 +19,15 @@ namespace BLL
         {
             return pro.insertProduct(product);
         }
+
+        public bool deleteProduct(int pro_id)
+        {
+            return pro.deleteProduct(pro_id);
+        }
+
+        public bool updateProduct(int id, string name, string slug,string type, int cate_id, string image)
+        {
+            return pro.updateProduct( id,  name,  slug, type, cate_id,  image);
+        }
     }
 }

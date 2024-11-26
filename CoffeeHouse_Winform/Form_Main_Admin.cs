@@ -28,13 +28,18 @@ namespace CoffeeHouse_Winform
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            UC_ADMIN_PRODUCT uc = new UC_ADMIN_PRODUCT();
-            addUserControl(uc);
+            
         }
 
         private void btnManageMenu_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnManageProduct_Click(object sender, EventArgs e)
+        {
+            UC_ADMIN_PRODUCT uc = new UC_ADMIN_PRODUCT();
+            addUserControl(uc);
         }
     }
 }
