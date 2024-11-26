@@ -43,7 +43,7 @@
             this.lblInfoID = new System.Windows.Forms.Label();
             this.lblInfoName = new System.Windows.Forms.Label();
             this.btnManageStaff = new Guna.UI2.WinForms.Guna2Button();
-            this.btnManageWorkDay = new Guna.UI2.WinForms.Guna2Button();
+            this.btnManageCate = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageInvoice = new Guna.UI2.WinForms.Guna2Button();
             this.btnReport = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -195,7 +195,7 @@
             this.btnManageProduct.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnManageProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnManageProduct.Image")));
             this.btnManageProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnManageProduct.Location = new System.Drawing.Point(0, 436);
+            this.btnManageProduct.Location = new System.Drawing.Point(-1, 510);
             this.btnManageProduct.Name = "btnManageProduct";
             this.btnManageProduct.Size = new System.Drawing.Size(234, 68);
             this.btnManageProduct.TabIndex = 10;
@@ -268,7 +268,7 @@
             this.btnManageStaff.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btnManageStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnManageStaff.Image")));
             this.btnManageStaff.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnManageStaff.Location = new System.Drawing.Point(-1, 510);
+            this.btnManageStaff.Location = new System.Drawing.Point(-1, 649);
             this.btnManageStaff.Name = "btnManageStaff";
             this.btnManageStaff.Size = new System.Drawing.Size(234, 68);
             this.btnManageStaff.TabIndex = 15;
@@ -276,29 +276,30 @@
             this.btnManageStaff.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnManageStaff.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // btnManageWorkDay
+            // btnManageCate
             // 
-            this.btnManageWorkDay.Animated = true;
-            this.btnManageWorkDay.BorderColor = System.Drawing.Color.Transparent;
-            this.btnManageWorkDay.BorderRadius = 10;
-            this.btnManageWorkDay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnManageWorkDay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnManageWorkDay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnManageWorkDay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnManageWorkDay.FillColor = System.Drawing.Color.Transparent;
-            this.btnManageWorkDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageWorkDay.ForeColor = System.Drawing.Color.DimGray;
-            this.btnManageWorkDay.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnManageWorkDay.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
-            this.btnManageWorkDay.Image = ((System.Drawing.Image)(resources.GetObject("btnManageWorkDay.Image")));
-            this.btnManageWorkDay.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnManageWorkDay.Location = new System.Drawing.Point(-1, 658);
-            this.btnManageWorkDay.Name = "btnManageWorkDay";
-            this.btnManageWorkDay.Size = new System.Drawing.Size(234, 68);
-            this.btnManageWorkDay.TabIndex = 16;
-            this.btnManageWorkDay.Text = "Quản lý ngày công";
-            this.btnManageWorkDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnManageWorkDay.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnManageCate.Animated = true;
+            this.btnManageCate.BorderColor = System.Drawing.Color.Transparent;
+            this.btnManageCate.BorderRadius = 10;
+            this.btnManageCate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageCate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageCate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageCate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageCate.FillColor = System.Drawing.Color.Transparent;
+            this.btnManageCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageCate.ForeColor = System.Drawing.Color.DimGray;
+            this.btnManageCate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnManageCate.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnManageCate.Image = ((System.Drawing.Image)(resources.GetObject("btnManageCate.Image")));
+            this.btnManageCate.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageCate.Location = new System.Drawing.Point(-1, 436);
+            this.btnManageCate.Name = "btnManageCate";
+            this.btnManageCate.Size = new System.Drawing.Size(234, 68);
+            this.btnManageCate.TabIndex = 16;
+            this.btnManageCate.Text = "Quản lý danh mục";
+            this.btnManageCate.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageCate.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnManageCate.Click += new System.EventHandler(this.btnManageCate_Click);
             // 
             // btnManageInvoice
             // 
@@ -366,17 +367,17 @@
             this.panelSidebar.BorderRadius = 10;
             this.panelSidebar.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.panelSidebar.BorderThickness = 1;
+            this.panelSidebar.Controls.Add(this.btnManageProduct);
+            this.panelSidebar.Controls.Add(this.btnManageStaff);
             this.panelSidebar.Controls.Add(this.guna2Button1);
             this.panelSidebar.Controls.Add(this.label3);
             this.panelSidebar.Controls.Add(this.btnReport);
             this.panelSidebar.Controls.Add(this.btnManageInvoice);
-            this.panelSidebar.Controls.Add(this.btnManageWorkDay);
-            this.panelSidebar.Controls.Add(this.btnManageStaff);
+            this.panelSidebar.Controls.Add(this.btnManageCate);
             this.panelSidebar.Controls.Add(this.lblInfoName);
             this.panelSidebar.Controls.Add(this.lblInfoID);
             this.panelSidebar.Controls.Add(this.guna2PictureBox4);
             this.panelSidebar.Controls.Add(this.lblMethodSidebar);
-            this.panelSidebar.Controls.Add(this.btnManageProduct);
             this.panelSidebar.Controls.Add(this.btnManageWorkTime);
             this.panelSidebar.Controls.Add(this.lblInfoSidebar);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -472,7 +473,7 @@
         private System.Windows.Forms.Label lblInfoID;
         private System.Windows.Forms.Label lblInfoName;
         private Guna.UI2.WinForms.Guna2Button btnManageStaff;
-        private Guna.UI2.WinForms.Guna2Button btnManageWorkDay;
+        private Guna.UI2.WinForms.Guna2Button btnManageCate;
         private Guna.UI2.WinForms.Guna2Button btnManageInvoice;
         private Guna.UI2.WinForms.Guna2Button btnReport;
         private System.Windows.Forms.Label label3;

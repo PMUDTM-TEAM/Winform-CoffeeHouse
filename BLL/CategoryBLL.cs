@@ -15,5 +15,25 @@ namespace BLL
         {
             return cate.getCategories();    
         }
+
+        public List<CategoryWithProducts> getCateWithProducts()
+        {
+            return cate.getCateWithProducts();
+        }
+
+        public bool insertCategory(Category category)
+        {
+            return cate.insertCategory(category);
+        }
+
+        public bool deleteCategory(int cate_id)
+        {
+            return cate.deleteCategory(cate_id);
+        }
+
+        public bool updateCategory(int id, string name, string slug)
+        {
+            return cate.updateCategory(id, name, slug);
+        }
     }
 }

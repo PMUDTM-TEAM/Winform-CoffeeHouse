@@ -1721,7 +1721,7 @@
         oESp23MQAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="resource.Image3" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="resource.Image1" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAK+RJREFUeF7t
         nQ2UJWV9p2cAyfiNkaO7oIKg5sM1uslZY1w32V3JiTm7mtU4fkTBZm7VneGjZzJKQGXofhPXXROIQFfd
@@ -1914,7 +1914,7 @@
         AAAAObFhw/8HfMWd+0mDMBoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnManageWorkDay.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnManageCate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAHEJJREFUeF7t
         3b+qdt1ZxeF0RlA7IWInxM6AB6OJh5NGIVhH88eDsVERC8EzMFiopQoaC10PaDdgZeTe+5nce10X/EAm

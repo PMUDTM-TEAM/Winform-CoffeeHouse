@@ -41,5 +41,11 @@ namespace CoffeeHouse_Winform
             UC_ADMIN_PRODUCT uc = new UC_ADMIN_PRODUCT();
             addUserControl(uc);
         }
+
+        private void btnManageCate_Click(object sender, EventArgs e)
+        {
+            UC_ADMIN_CATEGORY uc = new UC_ADMIN_CATEGORY();
+            addUserControl(uc);
+        }
     }
 }
