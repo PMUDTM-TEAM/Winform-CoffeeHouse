@@ -47,5 +47,23 @@ namespace CoffeeHouse_Winform
             UC_ADMIN_CATEGORY uc = new UC_ADMIN_CATEGORY();
             addUserControl(uc);
         }
+
+        private void btnManageTopping_Click(object sender, EventArgs e)
+        {
+            UC_ADMIN_TOPPING uc = new UC_ADMIN_TOPPING();
+            addUserControl(uc);
+        }
+
+        private void btnManageSize_Click(object sender, EventArgs e)
+        {
+            UC_ADMIN_SIZE uc = new UC_ADMIN_SIZE();
+            addUserControl(uc);
+        }
+
+        private void btnLinkProduct_Click(object sender, EventArgs e)
+        {
+            UC_ADMIN_PRODUCTVARIANT uc = new UC_ADMIN_PRODUCTVARIANT();
+            addUserControl(uc);
+        }
     }
 }

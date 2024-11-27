@@ -48,7 +48,10 @@
     <Compile Include="CategoryDAL.cs" />
     <Compile Include="LoginDAL.cs" />
     <Compile Include="ProductDAL.cs" />
+    <Compile Include="ProductVariantDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SizeDAL.cs" />
+    <Compile Include="ToppingDAL.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

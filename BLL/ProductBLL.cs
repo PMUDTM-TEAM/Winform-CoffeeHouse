@@ -29,5 +29,10 @@ namespace BLL
         {
             return pro.updateProduct( id,  name,  slug, type, cate_id,  image);
         }
+
+        public List<Product> getProductsByCateId(int cate_id)
+        {
+            return pro.getProductsByCateId( cate_id);
+        }    
     }
 }

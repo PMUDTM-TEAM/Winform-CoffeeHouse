@@ -33,7 +33,7 @@ namespace CoffeeHouse_Winform
             cate=new CategoryBLL();
         }
 
-        // Hàm load danh sách sản phẩm lên dgDSSP
+        // Hàm load danh sách danh sách lên dgDSSP
         public void loadList()
         {
             var categories = cate.getCateWithProducts();
@@ -78,7 +78,7 @@ namespace CoffeeHouse_Winform
             btnClear.Enabled=false;
         }
 
-        // Hàm mở các component cho việc thêm mới sản phẩm
+        // Hàm mở các component cho việc thêm mới danh mục
         public void openComponentForInsert()
         {
             txtName.Enabled = true;
@@ -87,7 +87,7 @@ namespace CoffeeHouse_Winform
             btnClear.Enabled = true;
         }
 
-        // Hàm mở các component cho việc cập nhật sản phẩm
+        // Hàm mở các component cho việc cập nhật danh mục
         public void openComponentForUpdate()
         {
             txtName.Enabled = true;
@@ -182,7 +182,7 @@ namespace CoffeeHouse_Winform
             }
         }
 
-        // Hàm của btnSave lưu sản phẩm mới
+        // Hàm của btnSave lưu danh mục mới
         private void btnSave_Click(object sender, EventArgs e)
         {
             string name=txtName.Text;
@@ -269,7 +269,7 @@ namespace CoffeeHouse_Winform
             openComponentForUpdate();
         }
 
-        // Hàm của btnFix dùng để cập nhật sản phẩm
+        // Hàm của btnFix dùng để cập nhật danh mục
         private void btnfix_Click(object sender, EventArgs e)
         {
             DataGridViewRow selectedRow = dgDSSP.SelectedRows[0];
@@ -309,7 +309,7 @@ namespace CoffeeHouse_Winform
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Có lỗi xảy ra khi xóa danh mục: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Có lỗi xảy ra khi sửa danh mục: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

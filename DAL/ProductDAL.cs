@@ -131,5 +131,10 @@ namespace DAL
                 return false;
             }
         }
+
+        public List<Product> getProductsByCateId(int cate_id)
+        {
+            return db.Products.Where(p=>p.Cate_Id == cate_id).ToList();
+        }
     }
 }

@@ -535,7 +535,7 @@ namespace CoffeeHouse_Winform
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Có lỗi xảy ra khi xóa sản phẩm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Có lỗi xảy ra khi sửa sản phẩm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

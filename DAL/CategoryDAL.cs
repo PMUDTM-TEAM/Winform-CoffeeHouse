@@ -106,7 +106,7 @@ namespace DAL
 
                 if (catetFromDb == null)
                 {
-                    Console.WriteLine("Không tìm thấy sản phẩm với id " + id);
+                    Console.WriteLine("Không tìm thấy danh mục với id " + id);
                     return false;
                 }
 
