@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
-using DTO;
+//using DTO;
 
 namespace CoffeeHouse_Winform
 {
@@ -29,9 +29,10 @@ namespace CoffeeHouse_Winform
 
             if (loginBLL.Login(email, password))
             {
-                MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Điều hướng đến trang chính
-                Form_Main_Admin mainForm = new Form_Main_Admin();
+                string name = LoginBLL.LoggedInUserName;
+                MessageBox.Show($"Đăng nhập thành công! Chào mừng {name}!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             
+                Form_Main_Admin mainForm = new Form_Main_Admin(name);
                 mainForm.Show();
 
                 this.Hide();

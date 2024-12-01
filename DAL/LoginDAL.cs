@@ -21,6 +21,9 @@ namespace DAL
             return db.Accounts.Any(a => a.Email == email && a.Password == password && a.Role.Name == "Admin");
         }
 
-
+        public Account GetAccountByEmail(string email)
+        {
+            return db.Accounts.SingleOrDefault(a => a.Email == email);
+        }
     }
 }

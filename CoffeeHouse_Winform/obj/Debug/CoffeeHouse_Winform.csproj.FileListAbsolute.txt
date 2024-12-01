@@ -18,9 +18,9 @@ D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\CoffeeHouse_Winform\bin\Debug\Liv
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\CoffeeHouse_Winform\bin\Debug\LiveCharts.WinForms.xml
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\CoffeeHouse_Winform\bin\Debug\DAL.pdb
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\CoffeeHouse_Winform\obj\Debug\CoffeeHouse_Winform.csproj.AssemblyReference.cache
-D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\CoffeeHouse_Winform\obj\Debug\CoffeeHouse_Winform.Form_Login_Admin.resources
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\CoffeeHouse_Winform\obj\Debug\CoffeeHouse_Winform.Form_Main_Admin.resources
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\CoffeeHouse_Winform\obj\Debug\CoffeeHouse_Winform.Properties.Resources.resources
+D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\CoffeeHouse_Winform\obj\Debug\CoffeeHouse_Winform.UC_ADMIN_ORDER.resources
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\CoffeeHouse_Winform\obj\Debug\CoffeeHouse_Winform.UC_ADMIN_PRODUCT.resources
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\CoffeeHouse_Winform\obj\Debug\CoffeeHouse_Winform.csproj.GenerateResource.cache
 D:\Các Môn HK7\PT_PMUDTM\CoffeeHouse_Winform\CoffeeHouse_Winform\obj\Debug\CoffeeHouse_Winform.csproj.CoreCompileInputs.cache

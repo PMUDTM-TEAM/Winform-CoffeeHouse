@@ -62,36 +62,12 @@
       <Association Name="Category_Product" Member="Products" ThisKey="Id" OtherKey="Cate_Id" Type="Product" />
     </Type>
   </Table>
-  <Table Name="dbo.[Order]" Member="Orders">
-    <Type Name="Order">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TotalPrice" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
-      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Address_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="A_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Order_OrderDetail" Member="OrderDetails" ThisKey="Id" OtherKey="Order_Id" Type="OrderDetail" />
-      <Association Name="Account_Order" Member="Account" ThisKey="A_Id" OtherKey="Id" Type="Account" IsForeignKey="true" />
-      <Association Name="Address_Order" Member="Address" ThisKey="Address_Id" OtherKey="Id" Type="Address" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.OrderDetail" Member="OrderDetails">
-    <Type Name="OrderDetail">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ProVar_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TotalPrice" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
-      <Column Name="Order_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="OrderDetail_OrderTopping" Member="OrderToppings" ThisKey="Id" OtherKey="OrderDetail_Id" Type="OrderTopping" />
-      <Association Name="Order_OrderDetail" Member="Order" ThisKey="Order_Id" OtherKey="Id" Type="Order" IsForeignKey="true" />
-      <Association Name="ProductVariant_OrderDetail" Member="ProductVariant" ThisKey="ProVar_Id" OtherKey="Id" Type="ProductVariant" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.OrderTopping" Member="OrderToppings">
     <Type Name="OrderTopping">
       <Column Name="OrderDetail_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Topping_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="OrderDetail_OrderTopping" Member="OrderDetail" ThisKey="OrderDetail_Id" OtherKey="Id" Type="OrderDetail" IsForeignKey="true" />
       <Association Name="Topping_OrderTopping" Member="Topping" ThisKey="Topping_Id" OtherKey="Id" Type="Topping" IsForeignKey="true" />
+      <Association Name="OrderDetail_OrderTopping" Member="OrderDetail" ThisKey="OrderDetail_Id" OtherKey="Id" Type="OrderDetail" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Product" Member="Products">
@@ -132,6 +108,34 @@
       <Column Name="Size" Member="Size1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Price" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
       <Association Name="Size_ProductVariant" Member="ProductVariants" ThisKey="Id" OtherKey="Size_Id" Type="ProductVariant" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Order]" Member="Orders">
+    <Type Name="Order">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TotalPrice" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Address_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="A_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaymentMethod" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PaymentStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedAt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Order_OrderDetail" Member="OrderDetails" ThisKey="Id" OtherKey="Order_Id" Type="OrderDetail" />
+      <Association Name="Account_Order" Member="Account" ThisKey="A_Id" OtherKey="Id" Type="Account" IsForeignKey="true" />
+      <Association Name="Address_Order" Member="Address" ThisKey="Address_Id" OtherKey="Id" Type="Address" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderDetail" Member="OrderDetails">
+    <Type Name="OrderDetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProVar_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalPrice" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Order_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedAt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="OrderDetail_OrderTopping" Member="OrderToppings" ThisKey="Id" OtherKey="OrderDetail_Id" Type="OrderTopping" />
+      <Association Name="Order_OrderDetail" Member="Order" ThisKey="Order_Id" OtherKey="Id" Type="Order" IsForeignKey="true" />
+      <Association Name="ProductVariant_OrderDetail" Member="ProductVariant" ThisKey="ProVar_Id" OtherKey="Id" Type="ProductVariant" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
