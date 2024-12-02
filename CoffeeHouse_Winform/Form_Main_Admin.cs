@@ -27,12 +27,19 @@ namespace CoffeeHouse_Winform
 
         private void BtnExitWindow_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bạn có chắc chắn muốn đăng xuất");
-            LoginBLL.LoggedInUserName = null;
-            Form_Login_Admin loginForm = new Form_Login_Admin();
-            loginForm.Show();
+            DialogResult result = MessageBox.Show(
+                "Bạn có chắc chắn muốn đăng xuất?",
+                "Xác nhận đăng xuất",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
 
-            this.Close();
+            if (result == DialogResult.Yes)
+            {
+                LoginBLL.LoggedInUserName = null;
+                Form_Login_Admin loginForm = new Form_Login_Admin();
+                loginForm.Show();
+                this.Close();
+            }
         }
 
         public void LoadUserInfo()

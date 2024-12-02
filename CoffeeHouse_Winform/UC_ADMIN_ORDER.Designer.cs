@@ -33,20 +33,18 @@
             this.cboStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.cboPaymentStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dateTimePickerPayment = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtTotalPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCustomerName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtOrderId = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnClearFilter = new Guna.UI2.WinForms.Guna2Button();
-            this.comboBoxMonth = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.dg_donhang = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -54,8 +52,6 @@
             this.dg_chitietdonhang = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePickerPayment = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panelControl.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_donhang)).BeginInit();
@@ -144,6 +140,24 @@
             this.cboPaymentStatus.Name = "cboPaymentStatus";
             this.cboPaymentStatus.Size = new System.Drawing.Size(248, 42);
             this.cboPaymentStatus.TabIndex = 47;
+            // 
+            // dateTimePickerPayment
+            // 
+            this.dateTimePickerPayment.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dateTimePickerPayment.BorderColor = System.Drawing.Color.Green;
+            this.dateTimePickerPayment.BorderRadius = 12;
+            this.dateTimePickerPayment.BorderThickness = 1;
+            this.dateTimePickerPayment.Checked = true;
+            this.dateTimePickerPayment.FillColor = System.Drawing.Color.White;
+            this.dateTimePickerPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.dateTimePickerPayment.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateTimePickerPayment.Location = new System.Drawing.Point(617, 96);
+            this.dateTimePickerPayment.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerPayment.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerPayment.Name = "dateTimePickerPayment";
+            this.dateTimePickerPayment.Size = new System.Drawing.Size(321, 43);
+            this.dateTimePickerPayment.TabIndex = 42;
+            this.dateTimePickerPayment.Value = new System.DateTime(2023, 12, 10, 10, 26, 18, 168);
             // 
             // txtTotalPrice
             // 
@@ -254,6 +268,16 @@
             this.label11.Size = new System.Drawing.Size(0, 16);
             this.label11.TabIndex = 6;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(614, 70);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 16);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Ngày thanh toán";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -290,10 +314,6 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2Panel1.BorderRadius = 16;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.btnClearFilter);
-            this.guna2Panel1.Controls.Add(this.comboBoxMonth);
-            this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.label8);
             this.guna2Panel1.Controls.Add(this.dg_donhang);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.Controls.Add(this.label12);
@@ -302,70 +322,15 @@
             this.guna2Panel1.Size = new System.Drawing.Size(945, 636);
             this.guna2Panel1.TabIndex = 45;
             // 
-            // btnClearFilter
-            // 
-            this.btnClearFilter.BorderRadius = 12;
-            this.btnClearFilter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClearFilter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClearFilter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClearFilter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClearFilter.FillColor = System.Drawing.Color.Red;
-            this.btnClearFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnClearFilter.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClearFilter.Location = new System.Drawing.Point(376, 99);
-            this.btnClearFilter.Name = "btnClearFilter";
-            this.btnClearFilter.Size = new System.Drawing.Size(180, 42);
-            this.btnClearFilter.TabIndex = 48;
-            this.btnClearFilter.Text = "Xoá bộ lọc";
-            // 
-            // comboBoxMonth
-            // 
-            this.comboBoxMonth.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxMonth.BorderColor = System.Drawing.Color.Green;
-            this.comboBoxMonth.BorderRadius = 10;
-            this.comboBoxMonth.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxMonth.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBoxMonth.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxMonth.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBoxMonth.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxMonth.ItemHeight = 36;
-            this.comboBoxMonth.Location = new System.Drawing.Point(110, 99);
-            this.comboBoxMonth.Name = "comboBoxMonth";
-            this.comboBoxMonth.Size = new System.Drawing.Size(248, 42);
-            this.comboBoxMonth.TabIndex = 46;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 110);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "Chọn tháng:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 70);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 25);
-            this.label8.TabIndex = 43;
-            this.label8.Text = "Lọc theo";
-            // 
             // dg_donhang
             // 
             this.dg_donhang.AllowUserToAddRows = false;
             this.dg_donhang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_donhang.Location = new System.Drawing.Point(19, 163);
+            this.dg_donhang.Location = new System.Drawing.Point(18, 64);
             this.dg_donhang.Margin = new System.Windows.Forms.Padding(4);
             this.dg_donhang.Name = "dg_donhang";
             this.dg_donhang.RowHeadersWidth = 51;
-            this.dg_donhang.Size = new System.Drawing.Size(911, 459);
+            this.dg_donhang.Size = new System.Drawing.Size(911, 558);
             this.dg_donhang.TabIndex = 0;
             // 
             // label7
@@ -435,34 +400,6 @@
             this.label19.Size = new System.Drawing.Size(0, 16);
             this.label19.TabIndex = 6;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(614, 70);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 16);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Ngày thanh toán";
-            // 
-            // dateTimePickerPayment
-            // 
-            this.dateTimePickerPayment.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dateTimePickerPayment.BorderColor = System.Drawing.Color.Green;
-            this.dateTimePickerPayment.BorderRadius = 12;
-            this.dateTimePickerPayment.BorderThickness = 1;
-            this.dateTimePickerPayment.Checked = true;
-            this.dateTimePickerPayment.FillColor = System.Drawing.Color.White;
-            this.dateTimePickerPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.dateTimePickerPayment.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTimePickerPayment.Location = new System.Drawing.Point(617, 96);
-            this.dateTimePickerPayment.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dateTimePickerPayment.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dateTimePickerPayment.Name = "dateTimePickerPayment";
-            this.dateTimePickerPayment.Size = new System.Drawing.Size(321, 43);
-            this.dateTimePickerPayment.TabIndex = 42;
-            this.dateTimePickerPayment.Value = new System.DateTime(2023, 12, 10, 10, 26, 18, 168);
-            // 
             // UC_ADMIN_ORDER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -499,10 +436,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button btnClearFilter;
-        private Guna.UI2.WinForms.Guna2ComboBox comboBoxMonth;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dg_donhang;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label12;
