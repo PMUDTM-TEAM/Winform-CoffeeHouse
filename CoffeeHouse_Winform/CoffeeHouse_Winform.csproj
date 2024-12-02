@@ -84,12 +84,6 @@
     <Compile Include="UC_ADMIN_ORDER.Designer.cs">
       <DependentUpon>UC_ADMIN_ORDER.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_ADMIN_PRODUCT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_ADMIN_PRODUCT.Designer.cs">
-      <DependentUpon>UC_ADMIN_PRODUCT.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form_Login_Admin.resx">
       <DependentUpon>Form_Login_Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,9 +102,6 @@
     </Compile>
     <EmbeddedResource Include="UC_ADMIN_ORDER.resx">
       <DependentUpon>UC_ADMIN_ORDER.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_ADMIN_PRODUCT.resx">
-      <DependentUpon>UC_ADMIN_PRODUCT.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
