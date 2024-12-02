@@ -48,6 +48,7 @@
             this.lb_name_admin = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
             this.panelHeader = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.lblNameLog = new System.Windows.Forms.Label();
             this.btnReport = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageInvoice = new Guna.UI2.WinForms.Guna2Button();
@@ -59,6 +60,27 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelSidebar.SuspendLayout();
             this.gunaOrder.SuspendLayout();
+=======
+            this.lblInfoSidebar = new System.Windows.Forms.Label();
+            this.btnManageWorkTime = new Guna.UI2.WinForms.Guna2Button();
+            this.btnManageProduct = new Guna.UI2.WinForms.Guna2Button();
+            this.lblMethodSidebar = new System.Windows.Forms.Label();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblInfoID = new System.Windows.Forms.Label();
+            this.lblInfoName = new System.Windows.Forms.Label();
+            this.btnManageStaff = new Guna.UI2.WinForms.Guna2Button();
+            this.btnManageCate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnManageInvoice = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReport = new Guna.UI2.WinForms.Guna2Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panelSidebar = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnManageTopping = new Guna.UI2.WinForms.Guna2Button();
+            this.panel_container = new System.Windows.Forms.Panel();
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.btnManageSize = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLinkProduct = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+>>>>>>> bbe1b1beca25b3d45dfd60e56d568eceb882144d
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -341,6 +363,7 @@
             // 
             // lblNameLog
             // 
+<<<<<<< HEAD
             this.lblNameLog.AutoSize = true;
             this.lblNameLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblNameLog.ForeColor = System.Drawing.Color.Green;
@@ -351,6 +374,186 @@
             this.lblNameLog.TabIndex = 14;
             this.lblNameLog.Text = "NameAdmin";
             this.lblNameLog.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+=======
+            this.lblInfoSidebar.AutoSize = true;
+            this.lblInfoSidebar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoSidebar.ForeColor = System.Drawing.Color.Blue;
+            this.lblInfoSidebar.Location = new System.Drawing.Point(12, 23);
+            this.lblInfoSidebar.Name = "lblInfoSidebar";
+            this.lblInfoSidebar.Size = new System.Drawing.Size(272, 29);
+            this.lblInfoSidebar.TabIndex = 9;
+            this.lblInfoSidebar.Text = "Thông tin quản trị viên";
+            // 
+            // btnManageWorkTime
+            // 
+            this.btnManageWorkTime.Animated = true;
+            this.btnManageWorkTime.BorderColor = System.Drawing.Color.Transparent;
+            this.btnManageWorkTime.BorderRadius = 10;
+            this.btnManageWorkTime.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageWorkTime.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageWorkTime.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageWorkTime.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageWorkTime.FillColor = System.Drawing.Color.Transparent;
+            this.btnManageWorkTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageWorkTime.ForeColor = System.Drawing.Color.DimGray;
+            this.btnManageWorkTime.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnManageWorkTime.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnManageWorkTime.Image = ((System.Drawing.Image)(resources.GetObject("btnManageWorkTime.Image")));
+            this.btnManageWorkTime.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageWorkTime.Location = new System.Drawing.Point(-1, 861);
+            this.btnManageWorkTime.Name = "btnManageWorkTime";
+            this.btnManageWorkTime.Size = new System.Drawing.Size(234, 68);
+            this.btnManageWorkTime.TabIndex = 9;
+            this.btnManageWorkTime.Text = "Quản lý ca làm việc";
+            this.btnManageWorkTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageWorkTime.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // btnManageProduct
+            // 
+            this.btnManageProduct.Animated = true;
+            this.btnManageProduct.BorderColor = System.Drawing.Color.Transparent;
+            this.btnManageProduct.BorderRadius = 10;
+            this.btnManageProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageProduct.FillColor = System.Drawing.Color.Transparent;
+            this.btnManageProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageProduct.ForeColor = System.Drawing.Color.DimGray;
+            this.btnManageProduct.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnManageProduct.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnManageProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnManageProduct.Image")));
+            this.btnManageProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageProduct.Location = new System.Drawing.Point(-1, 510);
+            this.btnManageProduct.Name = "btnManageProduct";
+            this.btnManageProduct.Size = new System.Drawing.Size(315, 68);
+            this.btnManageProduct.TabIndex = 10;
+            this.btnManageProduct.Text = "Quản lý sản phẩm";
+            this.btnManageProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageProduct.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnManageProduct.Click += new System.EventHandler(this.btnManageProduct_Click);
+            // 
+            // lblMethodSidebar
+            // 
+            this.lblMethodSidebar.AutoSize = true;
+            this.lblMethodSidebar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMethodSidebar.ForeColor = System.Drawing.Color.Blue;
+            this.lblMethodSidebar.Location = new System.Drawing.Point(12, 401);
+            this.lblMethodSidebar.Name = "lblMethodSidebar";
+            this.lblMethodSidebar.Size = new System.Drawing.Size(136, 29);
+            this.lblMethodSidebar.TabIndex = 11;
+            this.lblMethodSidebar.Text = "Chức năng";
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(54, 62);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(113, 110);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox4.TabIndex = 12;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // lblInfoID
+            // 
+            this.lblInfoID.AutoSize = true;
+            this.lblInfoID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblInfoID.ForeColor = System.Drawing.Color.Green;
+            this.lblInfoID.Location = new System.Drawing.Point(76, 187);
+            this.lblInfoID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInfoID.Name = "lblInfoID";
+            this.lblInfoID.Size = new System.Drawing.Size(102, 25);
+            this.lblInfoID.TabIndex = 13;
+            this.lblInfoID.Text = "maAdmin";
+            this.lblInfoID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblInfoName
+            // 
+            this.lblInfoName.AutoSize = true;
+            this.lblInfoName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblInfoName.ForeColor = System.Drawing.Color.Black;
+            this.lblInfoName.Location = new System.Drawing.Point(61, 217);
+            this.lblInfoName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInfoName.Name = "lblInfoName";
+            this.lblInfoName.Size = new System.Drawing.Size(113, 24);
+            this.lblInfoName.TabIndex = 14;
+            this.lblInfoName.Text = "nameAdmin";
+            this.lblInfoName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnManageStaff
+            // 
+            this.btnManageStaff.Animated = true;
+            this.btnManageStaff.BorderColor = System.Drawing.Color.Transparent;
+            this.btnManageStaff.BorderRadius = 10;
+            this.btnManageStaff.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageStaff.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageStaff.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageStaff.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageStaff.FillColor = System.Drawing.Color.Transparent;
+            this.btnManageStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageStaff.ForeColor = System.Drawing.Color.DimGray;
+            this.btnManageStaff.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnManageStaff.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.btnManageStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnManageStaff.Image")));
+            this.btnManageStaff.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageStaff.Location = new System.Drawing.Point(3, 844);
+            this.btnManageStaff.Name = "btnManageStaff";
+            this.btnManageStaff.Size = new System.Drawing.Size(234, 68);
+            this.btnManageStaff.TabIndex = 15;
+            this.btnManageStaff.Text = "Quản lý nhân viên";
+            this.btnManageStaff.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageStaff.TextOffset = new System.Drawing.Point(10, 0);
+            // 
+            // btnManageCate
+            // 
+            this.btnManageCate.Animated = true;
+            this.btnManageCate.BorderColor = System.Drawing.Color.Transparent;
+            this.btnManageCate.BorderRadius = 10;
+            this.btnManageCate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageCate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageCate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageCate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageCate.FillColor = System.Drawing.Color.Transparent;
+            this.btnManageCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageCate.ForeColor = System.Drawing.Color.DimGray;
+            this.btnManageCate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnManageCate.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.btnManageCate.Image = ((System.Drawing.Image)(resources.GetObject("btnManageCate.Image")));
+            this.btnManageCate.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageCate.Location = new System.Drawing.Point(-1, 436);
+            this.btnManageCate.Name = "btnManageCate";
+            this.btnManageCate.Size = new System.Drawing.Size(315, 68);
+            this.btnManageCate.TabIndex = 16;
+            this.btnManageCate.Text = "Quản lý danh mục";
+            this.btnManageCate.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageCate.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnManageCate.Click += new System.EventHandler(this.btnManageCate_Click);
+            // 
+            // btnManageInvoice
+            // 
+            this.btnManageInvoice.Animated = true;
+            this.btnManageInvoice.BorderColor = System.Drawing.Color.Transparent;
+            this.btnManageInvoice.BorderRadius = 10;
+            this.btnManageInvoice.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageInvoice.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageInvoice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageInvoice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageInvoice.FillColor = System.Drawing.Color.Transparent;
+            this.btnManageInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageInvoice.ForeColor = System.Drawing.Color.DimGray;
+            this.btnManageInvoice.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnManageInvoice.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            this.btnManageInvoice.Image = ((System.Drawing.Image)(resources.GetObject("btnManageInvoice.Image")));
+            this.btnManageInvoice.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageInvoice.Location = new System.Drawing.Point(-1, 799);
+            this.btnManageInvoice.Name = "btnManageInvoice";
+            this.btnManageInvoice.Size = new System.Drawing.Size(234, 68);
+            this.btnManageInvoice.TabIndex = 17;
+            this.btnManageInvoice.Text = "Quản lý hoá đơn";
+            this.btnManageInvoice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageInvoice.TextOffset = new System.Drawing.Point(10, 0);
+>>>>>>> bbe1b1beca25b3d45dfd60e56d568eceb882144d
             // 
             // btnReport
             // 
@@ -403,6 +606,7 @@
             // 
             // btnManageWorkDay
             // 
+<<<<<<< HEAD
             this.btnManageWorkDay.Animated = true;
             this.btnManageWorkDay.BorderColor = System.Drawing.Color.Transparent;
             this.btnManageWorkDay.BorderRadius = 10;
@@ -426,6 +630,59 @@
             this.btnManageWorkDay.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // btnManageStaff
+=======
+            this.panelSidebar.BorderColor = System.Drawing.Color.Silver;
+            this.panelSidebar.BorderRadius = 10;
+            this.panelSidebar.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.panelSidebar.BorderThickness = 1;
+            this.panelSidebar.Controls.Add(this.btnLinkProduct);
+            this.panelSidebar.Controls.Add(this.btnManageSize);
+            this.panelSidebar.Controls.Add(this.btnManageTopping);
+            this.panelSidebar.Controls.Add(this.btnManageProduct);
+            this.panelSidebar.Controls.Add(this.btnManageStaff);
+            this.panelSidebar.Controls.Add(this.label3);
+            this.panelSidebar.Controls.Add(this.btnReport);
+            this.panelSidebar.Controls.Add(this.btnManageInvoice);
+            this.panelSidebar.Controls.Add(this.btnManageCate);
+            this.panelSidebar.Controls.Add(this.lblInfoName);
+            this.panelSidebar.Controls.Add(this.lblInfoID);
+            this.panelSidebar.Controls.Add(this.guna2PictureBox4);
+            this.panelSidebar.Controls.Add(this.lblMethodSidebar);
+            this.panelSidebar.Controls.Add(this.btnManageWorkTime);
+            this.panelSidebar.Controls.Add(this.lblInfoSidebar);
+            this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSidebar.Location = new System.Drawing.Point(0, 71);
+            this.panelSidebar.Name = "panelSidebar";
+            this.panelSidebar.Size = new System.Drawing.Size(314, 915);
+            this.panelSidebar.TabIndex = 10;
+            // 
+            // btnManageTopping
+            // 
+            this.btnManageTopping.Animated = true;
+            this.btnManageTopping.BorderColor = System.Drawing.Color.Transparent;
+            this.btnManageTopping.BorderRadius = 10;
+            this.btnManageTopping.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageTopping.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageTopping.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageTopping.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageTopping.FillColor = System.Drawing.Color.Transparent;
+            this.btnManageTopping.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageTopping.ForeColor = System.Drawing.Color.DimGray;
+            this.btnManageTopping.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnManageTopping.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
+            this.btnManageTopping.Image = ((System.Drawing.Image)(resources.GetObject("btnManageTopping.Image")));
+            this.btnManageTopping.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageTopping.Location = new System.Drawing.Point(-1, 584);
+            this.btnManageTopping.Name = "btnManageTopping";
+            this.btnManageTopping.Size = new System.Drawing.Size(315, 68);
+            this.btnManageTopping.TabIndex = 21;
+            this.btnManageTopping.Text = "Quản lý topping";
+            this.btnManageTopping.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageTopping.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnManageTopping.Click += new System.EventHandler(this.btnManageTopping_Click);
+            // 
+            // panel_container
+>>>>>>> bbe1b1beca25b3d45dfd60e56d568eceb882144d
             // 
             this.btnManageStaff.Animated = true;
             this.btnManageStaff.BorderColor = System.Drawing.Color.Transparent;
@@ -449,6 +706,7 @@
             this.btnManageStaff.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnManageStaff.TextOffset = new System.Drawing.Point(10, 0);
             // 
+<<<<<<< HEAD
             // guna2PictureBox4
             // 
             this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
@@ -461,6 +719,9 @@
             this.guna2PictureBox4.TabStop = false;
             // 
             // btnManageMenu
+=======
+            // guna2ContextMenuStrip1
+>>>>>>> bbe1b1beca25b3d45dfd60e56d568eceb882144d
             // 
             this.btnManageMenu.Animated = true;
             this.btnManageMenu.BorderColor = System.Drawing.Color.Transparent;
@@ -522,6 +783,56 @@
             this.guna2PictureBox2.TabStop = false;
             this.guna2PictureBox2.UseTransparentBackground = true;
             // 
+            // btnManageSize
+            // 
+            this.btnManageSize.Animated = true;
+            this.btnManageSize.BorderColor = System.Drawing.Color.Transparent;
+            this.btnManageSize.BorderRadius = 10;
+            this.btnManageSize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageSize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageSize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageSize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageSize.FillColor = System.Drawing.Color.Transparent;
+            this.btnManageSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageSize.ForeColor = System.Drawing.Color.DimGray;
+            this.btnManageSize.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnManageSize.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            this.btnManageSize.Image = ((System.Drawing.Image)(resources.GetObject("btnManageSize.Image")));
+            this.btnManageSize.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageSize.Location = new System.Drawing.Point(0, 658);
+            this.btnManageSize.Name = "btnManageSize";
+            this.btnManageSize.Size = new System.Drawing.Size(315, 68);
+            this.btnManageSize.TabIndex = 22;
+            this.btnManageSize.Text = "Quản lý Size";
+            this.btnManageSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageSize.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnManageSize.Click += new System.EventHandler(this.btnManageSize_Click);
+            // 
+            // btnLinkProduct
+            // 
+            this.btnLinkProduct.Animated = true;
+            this.btnLinkProduct.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLinkProduct.BorderRadius = 10;
+            this.btnLinkProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLinkProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLinkProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLinkProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLinkProduct.FillColor = System.Drawing.Color.Transparent;
+            this.btnLinkProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLinkProduct.ForeColor = System.Drawing.Color.DimGray;
+            this.btnLinkProduct.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnLinkProduct.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnLinkProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnLinkProduct.Image")));
+            this.btnLinkProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLinkProduct.Location = new System.Drawing.Point(0, 732);
+            this.btnLinkProduct.Name = "btnLinkProduct";
+            this.btnLinkProduct.Size = new System.Drawing.Size(315, 68);
+            this.btnLinkProduct.TabIndex = 23;
+            this.btnLinkProduct.Text = "Liên kết sản phẩm";
+            this.btnLinkProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLinkProduct.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnLinkProduct.Click += new System.EventHandler(this.btnLinkProduct_Click);
+            // 
             // Form_Main_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -548,16 +859,17 @@
         #endregion
         private System.Windows.Forms.Label lblInfoSidebar;
         private Guna.UI2.WinForms.Guna2Button btnManageWorkTime;
-        private Guna.UI2.WinForms.Guna2Button btnManageMenu;
+        private Guna.UI2.WinForms.Guna2Button btnManageProduct;
         private System.Windows.Forms.Label lblMethodSidebar;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private System.Windows.Forms.Label lblInfoName;
         private Guna.UI2.WinForms.Guna2Button btnManageStaff;
-        private Guna.UI2.WinForms.Guna2Button btnManageWorkDay;
+        private Guna.UI2.WinForms.Guna2Button btnManageCate;
         private Guna.UI2.WinForms.Guna2Button btnManageInvoice;
         private Guna.UI2.WinForms.Guna2Button btnReport;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Panel panelSidebar;
+<<<<<<< HEAD
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private Guna.UI2.WinForms.Guna2Panel gunaOrder;
         public Guna.UI2.WinForms.Guna2Button btnCompleted;
@@ -574,5 +886,12 @@
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Label lblNameLog;
+=======
+        private System.Windows.Forms.Panel panel_container;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
+        private Guna.UI2.WinForms.Guna2Button btnManageTopping;
+        private Guna.UI2.WinForms.Guna2Button btnManageSize;
+        private Guna.UI2.WinForms.Guna2Button btnLinkProduct;
+>>>>>>> bbe1b1beca25b3d45dfd60e56d568eceb882144d
     }
 }

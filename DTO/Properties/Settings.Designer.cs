@@ -26,11 +26,20 @@ namespace DTO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-5KVBJE6O\\SQLEXPRESS;Initial Catalog=DB_CF;User ID=sa;Password=" +
-            "123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-741DDSM\\DIEN;Initial Catalog=DB_CF;User ID=sa;Password=123")]
         public string DB_CFConnectionString {
             get {
                 return ((string)(this["DB_CFConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-741DDSM\\DIEN;Initial Catalog=DB_CF;User ID=sa;Password=123")]
+        public string DB_CFConnectionString1 {
+            get {
+                return ((string)(this["DB_CFConnectionString1"]));
             }
         }
     }

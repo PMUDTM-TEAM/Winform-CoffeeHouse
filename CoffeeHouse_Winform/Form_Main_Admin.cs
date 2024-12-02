@@ -61,7 +61,11 @@ namespace CoffeeHouse_Winform
 
         private void btnManageInvoice_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             gunaOrder.Visible = !gunaOrder.Visible;
+=======
+            
+>>>>>>> bbe1b1beca25b3d45dfd60e56d568eceb882144d
         }
 
         private void btnAll_Click(object sender, EventArgs e)
@@ -123,6 +127,36 @@ namespace CoffeeHouse_Winform
         private void btnExitWindow_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnManageProduct_Click(object sender, EventArgs e)
+        {
+            UC_ADMIN_PRODUCT uc = new UC_ADMIN_PRODUCT();
+            addUserControl(uc);
+        }
+
+        private void btnManageCate_Click(object sender, EventArgs e)
+        {
+            UC_ADMIN_CATEGORY uc = new UC_ADMIN_CATEGORY();
+            addUserControl(uc);
+        }
+
+        private void btnManageTopping_Click(object sender, EventArgs e)
+        {
+            UC_ADMIN_TOPPING uc = new UC_ADMIN_TOPPING();
+            addUserControl(uc);
+        }
+
+        private void btnManageSize_Click(object sender, EventArgs e)
+        {
+            UC_ADMIN_SIZE uc = new UC_ADMIN_SIZE();
+            addUserControl(uc);
+        }
+
+        private void btnLinkProduct_Click(object sender, EventArgs e)
+        {
+            UC_ADMIN_PRODUCTVARIANT uc = new UC_ADMIN_PRODUCTVARIANT();
+            addUserControl(uc);
         }
     }
 }

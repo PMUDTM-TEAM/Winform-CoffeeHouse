@@ -51,8 +51,30 @@
     <Reference Include="LiveCharts.WinForms">
       <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
     </Reference>
+    <Reference Include="SixLabors.ImageSharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.ImageSharp.2.1.0\lib\net472\SixLabors.ImageSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.7.0.0\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,7 +100,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="UC_ADMIN_ORDER.cs">
+=======
+    <Compile Include="UC_ADMIN_PRODUCTVARIANT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ADMIN_PRODUCTVARIANT.Designer.cs">
+      <DependentUpon>UC_ADMIN_PRODUCTVARIANT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ADMIN_SIZE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ADMIN_SIZE.Designer.cs">
+      <DependentUpon>UC_ADMIN_SIZE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ADMIN_TOPPING.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ADMIN_TOPPING.Designer.cs">
+      <DependentUpon>UC_ADMIN_TOPPING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ADMIN_CATEGORY.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ADMIN_CATEGORY.Designer.cs">
+      <DependentUpon>UC_ADMIN_CATEGORY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ADMIN_PRODUCT.cs">
+>>>>>>> bbe1b1beca25b3d45dfd60e56d568eceb882144d
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_ADMIN_ORDER.Designer.cs">
@@ -100,9 +150,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="UC_ADMIN_ORDER.resx">
       <DependentUpon>UC_ADMIN_ORDER.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="UC_ADMIN_PRODUCTVARIANT.resx">
+      <DependentUpon>UC_ADMIN_PRODUCTVARIANT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_ADMIN_SIZE.resx">
+      <DependentUpon>UC_ADMIN_SIZE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ADMIN_TOPPING.resx">
+      <DependentUpon>UC_ADMIN_TOPPING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ADMIN_CATEGORY.resx">
+      <DependentUpon>UC_ADMIN_CATEGORY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ADMIN_PRODUCT.resx">
+      <DependentUpon>UC_ADMIN_PRODUCT.cs</DependentUpon>
+>>>>>>> bbe1b1beca25b3d45dfd60e56d568eceb882144d
+    </EmbeddedResource>
+    <None Include="Images\bo_sua_pho_mai_tuoi.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\dau_pho_mai_tuoi.webp" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -116,11 +188,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <None Include="Resources\download.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download1.jpg" />
   </ItemGroup>
+=======
+  <ItemGroup />
+>>>>>>> bbe1b1beca25b3d45dfd60e56d568eceb882144d
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

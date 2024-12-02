@@ -46,10 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryDAL.cs" />
     <Compile Include="LoginDAL.cs" />
+<<<<<<< HEAD
     <Compile Include="OrderDAL.cs" />
     <Compile Include="OrderDetailDAL.cs" />
+=======
+    <Compile Include="ProductDAL.cs" />
+    <Compile Include="ProductVariantDAL.cs" />
+>>>>>>> bbe1b1beca25b3d45dfd60e56d568eceb882144d
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SizeDAL.cs" />
+    <Compile Include="ToppingDAL.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
