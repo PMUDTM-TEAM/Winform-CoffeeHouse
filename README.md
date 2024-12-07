@@ -71,12 +71,12 @@ Tích hợp giữa giao diện web và ứng dụng WinForm trong hệ thống C
                 <td></td>
             </tr>
             <tr>
-                <td>3</td>
+                <td>4</td>
                 <td>Quản lý size</td>
                 <td></td>
             </tr>
             <tr>
-                <td>1</td>
+                <td>5</td>
                 <td>Quản lý đơn hàng</td>
                 <td></td>
             </tr>
