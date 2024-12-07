@@ -55,16 +55,31 @@ Tích hợp giữa giao diện web và ứng dụng WinForm trong hệ thống C
             </tr>
         </thead>
         <tbody>
+              <tr>
+                <td>1</td>
+                <td>Quản lý danh mục</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Quản lý sản phẩm</td>
+                <td></td>
+            </tr>
+             <tr>
+                <td>3</td>
+                <td>Quản lý topping</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Quản lý size</td>
+                <td></td>
+            </tr>
             <tr>
                 <td>1</td>
                 <td>Quản lý đơn hàng</td>
                 <td></td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Thống kê doanh thu</td>
-                <td></td>
-            </tr>   
         </tbody>
     </table>
 
