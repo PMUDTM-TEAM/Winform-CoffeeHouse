@@ -1,13 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_CF" Class="QLCFDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-741DDSM\DIEN;Initial Catalog=DB_CF;User ID=sa" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="DB_CFConnectionString1" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Size" Member="Sizes">
-    <Type Name="Size">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Size" Member="Size1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Price" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
-      <Association Name="Size_ProductVariant" Member="ProductVariants" ThisKey="Id" OtherKey="Size_Id" Type="ProductVariant" />
-    </Type>
-  </Table>
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-741DDSM\DIEN;Initial Catalog=DB_CF;Integrated Security=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="DB_CFConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Account" Member="Accounts">
     <Type Name="Account">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -21,11 +13,13 @@
       <Association Name="Role_Account" Member="Role" ThisKey="Role_Id" OtherKey="Id" Type="Role" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Role" Member="Roles">
-    <Type Name="Role">
+  <Table Name="dbo.Warehouse" Member="Warehouses">
+    <Type Name="Warehouse">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Association Name="Role_Account" Member="Accounts" ThisKey="Id" OtherKey="Role_Id" Type="Account" />
+      <Column Name="Provar_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Day_In" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="ProductVariant_Warehouse" Member="ProductVariant" ThisKey="Provar_id" OtherKey="Id" Type="ProductVariant" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Address" Member="Addresses">
@@ -76,6 +70,9 @@
       <Column Name="Address_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="A_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaymentMethod" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PaymentStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedAt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="Order_OrderDetail" Member="OrderDetails" ThisKey="Id" OtherKey="Order_Id" Type="OrderDetail" />
       <Association Name="Account_Order" Member="Account" ThisKey="A_Id" OtherKey="Id" Type="Account" IsForeignKey="true" />
       <Association Name="Address_Order" Member="Address" ThisKey="Address_Id" OtherKey="Id" Type="Address" IsForeignKey="true" />
@@ -88,6 +85,7 @@
       <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TotalPrice" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
       <Column Name="Order_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedAt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="OrderDetail_OrderTopping" Member="OrderToppings" ThisKey="Id" OtherKey="OrderDetail_Id" Type="OrderTopping" />
       <Association Name="Order_OrderDetail" Member="Order" ThisKey="Order_Id" OtherKey="Id" Type="Order" IsForeignKey="true" />
       <Association Name="ProductVariant_OrderDetail" Member="ProductVariant" ThisKey="ProVar_Id" OtherKey="Id" Type="ProductVariant" IsForeignKey="true" />
@@ -120,10 +118,26 @@
       <Column Name="Size_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Price" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Association Name="ProductVariant_Warehouse" Member="Warehouses" ThisKey="Id" OtherKey="Provar_id" Type="Warehouse" />
       <Association Name="ProductVariant_Cart" Member="Carts" ThisKey="Id" OtherKey="ProVar_Id" Type="Cart" />
       <Association Name="ProductVariant_OrderDetail" Member="OrderDetails" ThisKey="Id" OtherKey="ProVar_Id" Type="OrderDetail" />
       <Association Name="Product_ProductVariant" Member="Product" ThisKey="Pro_Id" OtherKey="Id" Type="Product" IsForeignKey="true" />
       <Association Name="Size_ProductVariant" Member="Size" ThisKey="Size_Id" OtherKey="Id" Type="Size" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Role" Member="Roles">
+    <Type Name="Role">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Role_Account" Member="Accounts" ThisKey="Id" OtherKey="Role_Id" Type="Account" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Size" Member="Sizes">
+    <Type Name="Size">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Size" Member="Size1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Association Name="Size_ProductVariant" Member="ProductVariants" ThisKey="Id" OtherKey="Size_Id" Type="ProductVariant" />
     </Type>
   </Table>
   <Table Name="dbo.Topping" Member="Toppings">

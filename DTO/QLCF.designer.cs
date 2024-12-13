@@ -30,15 +30,12 @@ namespace DTO
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertSize(Size instance);
-    partial void UpdateSize(Size instance);
-    partial void DeleteSize(Size instance);
     partial void InsertAccount(Account instance);
     partial void UpdateAccount(Account instance);
     partial void DeleteAccount(Account instance);
-    partial void InsertRole(Role instance);
-    partial void UpdateRole(Role instance);
-    partial void DeleteRole(Role instance);
+    partial void InsertWarehouse(Warehouse instance);
+    partial void UpdateWarehouse(Warehouse instance);
+    partial void DeleteWarehouse(Warehouse instance);
     partial void InsertAddress(Address instance);
     partial void UpdateAddress(Address instance);
     partial void DeleteAddress(Address instance);
@@ -66,13 +63,19 @@ namespace DTO
     partial void InsertProductVariant(ProductVariant instance);
     partial void UpdateProductVariant(ProductVariant instance);
     partial void DeleteProductVariant(ProductVariant instance);
+    partial void InsertRole(Role instance);
+    partial void UpdateRole(Role instance);
+    partial void DeleteRole(Role instance);
+    partial void InsertSize(Size instance);
+    partial void UpdateSize(Size instance);
+    partial void DeleteSize(Size instance);
     partial void InsertTopping(Topping instance);
     partial void UpdateTopping(Topping instance);
     partial void DeleteTopping(Topping instance);
     #endregion
 		
 		public QLCFDataContext() : 
-				base(global::DTO.Properties.Settings.Default.DB_CFConnectionString1, mappingSource)
+				base(global::DTO.Properties.Settings.Default.DB_CFConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -101,14 +104,6 @@ namespace DTO
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Size> Sizes
-		{
-			get
-			{
-				return this.GetTable<Size>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Account> Accounts
 		{
 			get
@@ -117,11 +112,11 @@ namespace DTO
 			}
 		}
 		
-		public System.Data.Linq.Table<Role> Roles
+		public System.Data.Linq.Table<Warehouse> Warehouses
 		{
 			get
 			{
-				return this.GetTable<Role>();
+				return this.GetTable<Warehouse>();
 			}
 		}
 		
@@ -197,150 +192,28 @@ namespace DTO
 			}
 		}
 		
+		public System.Data.Linq.Table<Role> Roles
+		{
+			get
+			{
+				return this.GetTable<Role>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Size> Sizes
+		{
+			get
+			{
+				return this.GetTable<Size>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Topping> Toppings
 		{
 			get
 			{
 				return this.GetTable<Topping>();
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Size")]
-	public partial class Size : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private string _Size1;
-		
-		private System.Nullable<decimal> _Price;
-		
-		private EntitySet<ProductVariant> _ProductVariants;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnSize1Changing(string value);
-    partial void OnSize1Changed();
-    partial void OnPriceChanging(System.Nullable<decimal> value);
-    partial void OnPriceChanged();
-    #endregion
-		
-		public Size()
-		{
-			this._ProductVariants = new EntitySet<ProductVariant>(new Action<ProductVariant>(this.attach_ProductVariants), new Action<ProductVariant>(this.detach_ProductVariants));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="Size", Storage="_Size1", DbType="NVarChar(50)")]
-		public string Size1
-		{
-			get
-			{
-				return this._Size1;
-			}
-			set
-			{
-				if ((this._Size1 != value))
-				{
-					this.OnSize1Changing(value);
-					this.SendPropertyChanging();
-					this._Size1 = value;
-					this.SendPropertyChanged("Size1");
-					this.OnSize1Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Decimal(10,2)")]
-		public System.Nullable<decimal> Price
-		{
-			get
-			{
-				return this._Price;
-			}
-			set
-			{
-				if ((this._Price != value))
-				{
-					this.OnPriceChanging(value);
-					this.SendPropertyChanging();
-					this._Price = value;
-					this.SendPropertyChanged("Price");
-					this.OnPriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_ProductVariant", Storage="_ProductVariants", ThisKey="Id", OtherKey="Size_Id")]
-		public EntitySet<ProductVariant> ProductVariants
-		{
-			get
-			{
-				return this._ProductVariants;
-			}
-			set
-			{
-				this._ProductVariants.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_ProductVariants(ProductVariant entity)
-		{
-			this.SendPropertyChanging();
-			entity.Size = this;
-		}
-		
-		private void detach_ProductVariants(ProductVariant entity)
-		{
-			this.SendPropertyChanging();
-			entity.Size = null;
 		}
 	}
 	
@@ -627,17 +500,21 @@ namespace DTO
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Role")]
-	public partial class Role : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Warehouse")]
+	public partial class Warehouse : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _Id;
 		
-		private string _Name;
+		private System.Nullable<int> _Provar_id;
 		
-		private EntitySet<Account> _Accounts;
+		private System.Nullable<int> _Quantity;
+		
+		private System.Nullable<System.DateTime> _Day_In;
+		
+		private EntityRef<ProductVariant> _ProductVariant;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -645,13 +522,17 @@ namespace DTO
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
+    partial void OnProvar_idChanging(System.Nullable<int> value);
+    partial void OnProvar_idChanged();
+    partial void OnQuantityChanging(System.Nullable<int> value);
+    partial void OnQuantityChanged();
+    partial void OnDay_InChanging(System.Nullable<System.DateTime> value);
+    partial void OnDay_InChanged();
     #endregion
 		
-		public Role()
+		public Warehouse()
 		{
-			this._Accounts = new EntitySet<Account>(new Action<Account>(this.attach_Accounts), new Action<Account>(this.detach_Accounts));
+			this._ProductVariant = default(EntityRef<ProductVariant>);
 			OnCreated();
 		}
 		
@@ -675,36 +556,101 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string Name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Provar_id", DbType="Int")]
+		public System.Nullable<int> Provar_id
 		{
 			get
 			{
-				return this._Name;
+				return this._Provar_id;
 			}
 			set
 			{
-				if ((this._Name != value))
+				if ((this._Provar_id != value))
 				{
-					this.OnNameChanging(value);
+					if (this._ProductVariant.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnProvar_idChanging(value);
 					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
+					this._Provar_id = value;
+					this.SendPropertyChanged("Provar_id");
+					this.OnProvar_idChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Role_Account", Storage="_Accounts", ThisKey="Id", OtherKey="Role_Id")]
-		public EntitySet<Account> Accounts
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int")]
+		public System.Nullable<int> Quantity
 		{
 			get
 			{
-				return this._Accounts;
+				return this._Quantity;
 			}
 			set
 			{
-				this._Accounts.Assign(value);
+				if ((this._Quantity != value))
+				{
+					this.OnQuantityChanging(value);
+					this.SendPropertyChanging();
+					this._Quantity = value;
+					this.SendPropertyChanged("Quantity");
+					this.OnQuantityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Day_In", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Day_In
+		{
+			get
+			{
+				return this._Day_In;
+			}
+			set
+			{
+				if ((this._Day_In != value))
+				{
+					this.OnDay_InChanging(value);
+					this.SendPropertyChanging();
+					this._Day_In = value;
+					this.SendPropertyChanged("Day_In");
+					this.OnDay_InChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ProductVariant_Warehouse", Storage="_ProductVariant", ThisKey="Provar_id", OtherKey="Id", IsForeignKey=true)]
+		public ProductVariant ProductVariant
+		{
+			get
+			{
+				return this._ProductVariant.Entity;
+			}
+			set
+			{
+				ProductVariant previousValue = this._ProductVariant.Entity;
+				if (((previousValue != value) 
+							|| (this._ProductVariant.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ProductVariant.Entity = null;
+						previousValue.Warehouses.Remove(this);
+					}
+					this._ProductVariant.Entity = value;
+					if ((value != null))
+					{
+						value.Warehouses.Add(this);
+						this._Provar_id = value.Id;
+					}
+					else
+					{
+						this._Provar_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("ProductVariant");
+				}
 			}
 		}
 		
@@ -726,18 +672,6 @@ namespace DTO
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_Accounts(Account entity)
-		{
-			this.SendPropertyChanging();
-			entity.Role = this;
-		}
-		
-		private void detach_Accounts(Account entity)
-		{
-			this.SendPropertyChanging();
-			entity.Role = null;
 		}
 	}
 	
@@ -1584,6 +1518,12 @@ namespace DTO
 		
 		private System.Nullable<int> _A_Id;
 		
+		private string _PaymentMethod;
+		
+		private string _PaymentStatus;
+		
+		private System.Nullable<System.DateTime> _CreatedAt;
+		
 		private EntitySet<OrderDetail> _OrderDetails;
 		
 		private EntityRef<Account> _Account;
@@ -1606,6 +1546,12 @@ namespace DTO
     partial void OnDateChanged();
     partial void OnA_IdChanging(System.Nullable<int> value);
     partial void OnA_IdChanged();
+    partial void OnPaymentMethodChanging(string value);
+    partial void OnPaymentMethodChanged();
+    partial void OnPaymentStatusChanging(string value);
+    partial void OnPaymentStatusChanged();
+    partial void OnCreatedAtChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreatedAtChanged();
     #endregion
 		
 		public Order()
@@ -1744,6 +1690,66 @@ namespace DTO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentMethod", DbType="NVarChar(50)")]
+		public string PaymentMethod
+		{
+			get
+			{
+				return this._PaymentMethod;
+			}
+			set
+			{
+				if ((this._PaymentMethod != value))
+				{
+					this.OnPaymentMethodChanging(value);
+					this.SendPropertyChanging();
+					this._PaymentMethod = value;
+					this.SendPropertyChanged("PaymentMethod");
+					this.OnPaymentMethodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentStatus", DbType="NVarChar(50)")]
+		public string PaymentStatus
+		{
+			get
+			{
+				return this._PaymentStatus;
+			}
+			set
+			{
+				if ((this._PaymentStatus != value))
+				{
+					this.OnPaymentStatusChanging(value);
+					this.SendPropertyChanging();
+					this._PaymentStatus = value;
+					this.SendPropertyChanged("PaymentStatus");
+					this.OnPaymentStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedAt", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreatedAt
+		{
+			get
+			{
+				return this._CreatedAt;
+			}
+			set
+			{
+				if ((this._CreatedAt != value))
+				{
+					this.OnCreatedAtChanging(value);
+					this.SendPropertyChanging();
+					this._CreatedAt = value;
+					this.SendPropertyChanged("CreatedAt");
+					this.OnCreatedAtChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Order_OrderDetail", Storage="_OrderDetails", ThisKey="Id", OtherKey="Order_Id")]
 		public EntitySet<OrderDetail> OrderDetails
 		{
@@ -1874,6 +1880,8 @@ namespace DTO
 		
 		private System.Nullable<int> _Order_Id;
 		
+		private System.Nullable<System.DateTime> _CreatedAt;
+		
 		private EntitySet<OrderTopping> _OrderToppings;
 		
 		private EntityRef<Order> _Order;
@@ -1894,6 +1902,8 @@ namespace DTO
     partial void OnTotalPriceChanged();
     partial void OnOrder_IdChanging(System.Nullable<int> value);
     partial void OnOrder_IdChanged();
+    partial void OnCreatedAtChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreatedAtChanged();
     #endregion
 		
 		public OrderDetail()
@@ -2008,6 +2018,26 @@ namespace DTO
 					this._Order_Id = value;
 					this.SendPropertyChanged("Order_Id");
 					this.OnOrder_IdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedAt", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreatedAt
+		{
+			get
+			{
+				return this._CreatedAt;
+			}
+			set
+			{
+				if ((this._CreatedAt != value))
+				{
+					this.OnCreatedAtChanging(value);
+					this.SendPropertyChanging();
+					this._CreatedAt = value;
+					this.SendPropertyChanged("CreatedAt");
+					this.OnCreatedAtChanged();
 				}
 			}
 		}
@@ -2561,6 +2591,8 @@ namespace DTO
 		
 		private System.Nullable<decimal> _Price;
 		
+		private EntitySet<Warehouse> _Warehouses;
+		
 		private EntitySet<Cart> _Carts;
 		
 		private EntitySet<OrderDetail> _OrderDetails;
@@ -2587,6 +2619,7 @@ namespace DTO
 		
 		public ProductVariant()
 		{
+			this._Warehouses = new EntitySet<Warehouse>(new Action<Warehouse>(this.attach_Warehouses), new Action<Warehouse>(this.detach_Warehouses));
 			this._Carts = new EntitySet<Cart>(new Action<Cart>(this.attach_Carts), new Action<Cart>(this.detach_Carts));
 			this._OrderDetails = new EntitySet<OrderDetail>(new Action<OrderDetail>(this.attach_OrderDetails), new Action<OrderDetail>(this.detach_OrderDetails));
 			this._Product = default(EntityRef<Product>);
@@ -2699,6 +2732,19 @@ namespace DTO
 					this.SendPropertyChanged("Price");
 					this.OnPriceChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ProductVariant_Warehouse", Storage="_Warehouses", ThisKey="Id", OtherKey="Provar_id")]
+		public EntitySet<Warehouse> Warehouses
+		{
+			get
+			{
+				return this._Warehouses;
+			}
+			set
+			{
+				this._Warehouses.Assign(value);
 			}
 		}
 		
@@ -2816,6 +2862,18 @@ namespace DTO
 			}
 		}
 		
+		private void attach_Warehouses(Warehouse entity)
+		{
+			this.SendPropertyChanging();
+			entity.ProductVariant = this;
+		}
+		
+		private void detach_Warehouses(Warehouse entity)
+		{
+			this.SendPropertyChanging();
+			entity.ProductVariant = null;
+		}
+		
 		private void attach_Carts(Cart entity)
 		{
 			this.SendPropertyChanging();
@@ -2838,6 +2896,258 @@ namespace DTO
 		{
 			this.SendPropertyChanging();
 			entity.ProductVariant = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Role")]
+	public partial class Role : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _Name;
+		
+		private EntitySet<Account> _Accounts;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    #endregion
+		
+		public Role()
+		{
+			this._Accounts = new EntitySet<Account>(new Action<Account>(this.attach_Accounts), new Action<Account>(this.detach_Accounts));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Role_Account", Storage="_Accounts", ThisKey="Id", OtherKey="Role_Id")]
+		public EntitySet<Account> Accounts
+		{
+			get
+			{
+				return this._Accounts;
+			}
+			set
+			{
+				this._Accounts.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Accounts(Account entity)
+		{
+			this.SendPropertyChanging();
+			entity.Role = this;
+		}
+		
+		private void detach_Accounts(Account entity)
+		{
+			this.SendPropertyChanging();
+			entity.Role = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Size")]
+	public partial class Size : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _Size1;
+		
+		private System.Nullable<decimal> _Price;
+		
+		private EntitySet<ProductVariant> _ProductVariants;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnSize1Changing(string value);
+    partial void OnSize1Changed();
+    partial void OnPriceChanging(System.Nullable<decimal> value);
+    partial void OnPriceChanged();
+    #endregion
+		
+		public Size()
+		{
+			this._ProductVariants = new EntitySet<ProductVariant>(new Action<ProductVariant>(this.attach_ProductVariants), new Action<ProductVariant>(this.detach_ProductVariants));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="Size", Storage="_Size1", DbType="NVarChar(50)")]
+		public string Size1
+		{
+			get
+			{
+				return this._Size1;
+			}
+			set
+			{
+				if ((this._Size1 != value))
+				{
+					this.OnSize1Changing(value);
+					this.SendPropertyChanging();
+					this._Size1 = value;
+					this.SendPropertyChanged("Size1");
+					this.OnSize1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this.OnPriceChanging(value);
+					this.SendPropertyChanging();
+					this._Price = value;
+					this.SendPropertyChanged("Price");
+					this.OnPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_ProductVariant", Storage="_ProductVariants", ThisKey="Id", OtherKey="Size_Id")]
+		public EntitySet<ProductVariant> ProductVariants
+		{
+			get
+			{
+				return this._ProductVariants;
+			}
+			set
+			{
+				this._ProductVariants.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_ProductVariants(ProductVariant entity)
+		{
+			this.SendPropertyChanging();
+			entity.Size = this;
+		}
+		
+		private void detach_ProductVariants(ProductVariant entity)
+		{
+			this.SendPropertyChanging();
+			entity.Size = null;
 		}
 	}
 	

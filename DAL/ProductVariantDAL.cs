@@ -36,6 +36,29 @@ namespace DAL
             return result;
         }
 
+        public bool insertQuantityProductVariant(int quantity, int pro_id, int size_id)
+        {
+            try
+            {
+                ProductVariant provarFromDb = db.ProductVariants.FirstOrDefault(pv => pv.Pro_Id == pro_id && pv.Size_Id == size_id);
+                int? provarQuantity=provarFromDb.Quantity;
+                int? newQuantity = provarQuantity + quantity;
+                provarFromDb.Quantity = newQuantity;
+
+
+                db.SubmitChanges();
+
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"Lỗi khi thêm liên kết: {ex.Message}");
+
+                return false;
+            }
+        }
 
         public bool insertProductVariant(ProductVariant pro)
         {
@@ -94,7 +117,7 @@ namespace DAL
             return exists;
         }
 
-        public bool updateProductVariant(int id, int quantity , decimal price)
+        public bool updateProductVariant(int id , decimal price)
         {
             try
             {
@@ -109,11 +132,7 @@ namespace DAL
                 }
 
 
-                if (quantity>0)
-                {
-                    provarFromDb.Quantity = quantity;
-                }
-
+               
                 if (price > 0)
                 {
                     provarFromDb.Price = price;

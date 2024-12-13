@@ -56,6 +56,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLCF.dbml</DependentUpon>
     </Compile>
+    <Compile Include="WarehouseWithProduct.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

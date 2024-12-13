@@ -42,5 +42,15 @@ namespace DTO.Properties {
                 return ((string)(this["DB_CFConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-741DDSM\\DIEN;Initial Catalog=DB_CF;Integrated Security=True")]
+        public string DB_CFConnectionString2 {
+            get {
+                return ((string)(this["DB_CFConnectionString2"]));
+            }
+        }
     }
 }

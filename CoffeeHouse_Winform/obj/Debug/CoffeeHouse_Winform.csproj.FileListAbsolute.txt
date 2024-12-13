@@ -75,3 +75,4 @@ D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\CoffeeHous
 D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\CoffeeHouse_Winform\obj\Debug\CoffeeHouse_Winform.UC_ADMIN_TOPPING.resources
 D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\CoffeeHouse_Winform\obj\Debug\CoffeeHouse_Winform.UC_ADMIN_SIZE.resources
 D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\CoffeeHouse_Winform\obj\Debug\CoffeeHouse_Winform.UC_ADMIN_PRODUCTVARIANT.resources
+D:\HK7\Ứng dụng thông minh\Đồ án\Winform\Winform-CoffeeHouse\CoffeeHouse_Winform\obj\Debug\CoffeeHouse_Winform.UC_ADMIN_WAREHOUSE.resources

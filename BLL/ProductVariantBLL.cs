@@ -31,9 +31,14 @@ namespace BLL
             return provar.checkProductVariant(pro_id, size_id);
         }
 
-        public bool updateProductVariant(int id, int quantity, decimal price)
+        public bool updateProductVariant(int id, decimal price)
         {
-            return provar.updateProductVariant(id, quantity, price);
+            return provar.updateProductVariant(id, price);
+        }
+
+        public bool insertQuantityProductVariant(int quantity, int pro_id, int size_id)
+        {
+            return provar.insertQuantityProductVariant(quantity, pro_id, size_id);
         }
     }
 }

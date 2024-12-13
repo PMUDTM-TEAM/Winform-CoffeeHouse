@@ -65,5 +65,11 @@ namespace CoffeeHouse_Winform
             UC_ADMIN_PRODUCTVARIANT uc = new UC_ADMIN_PRODUCTVARIANT();
             addUserControl(uc);
         }
+
+        private void btnWarehouse_Click(object sender, EventArgs e)
+        {
+            UC_ADMIN_WAREHOUSE uc = new UC_ADMIN_WAREHOUSE();
+            addUserControl(uc);
+        }
     }
 }

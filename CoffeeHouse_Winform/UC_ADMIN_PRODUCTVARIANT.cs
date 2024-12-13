@@ -99,7 +99,7 @@ namespace CoffeeHouse_Winform
         // Hàm đóng tất cả các component
         public void closeComponent()
         {
-            txtSoLuong.Enabled=false;
+          
             txtPrice.Enabled=false;
             btnfix.Enabled=false;
             btnSave.Enabled=false;
@@ -111,7 +111,7 @@ namespace CoffeeHouse_Winform
         // Hàm mở các component cho việc thêm mới liên kết
         public void openComponentForInsert()
         {
-            txtSoLuong.Enabled = true;
+            
             txtPrice.Enabled=true;
             btnSave.Enabled = true;
             btn_cancelSave.Enabled = true;
@@ -122,7 +122,7 @@ namespace CoffeeHouse_Winform
         // Hàm mở các component khi sửa liên kết
         public void openComponentForUpdate()
         {
-            txtSoLuong.Enabled = true;
+          
             txtPrice.Enabled=true;
             btnfix.Enabled = true;
             btn_cancelSave.Enabled = true;
@@ -141,7 +141,7 @@ namespace CoffeeHouse_Winform
         // Hàm dùng reset thông tin nhập liệu
         public void clearInfor()
         {
-            txtSoLuong.Text = "";
+          
             txtPrice.Text = "";
         }
 
@@ -183,17 +183,13 @@ namespace CoffeeHouse_Winform
         // Hàm của btnSave lưu size mới
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtSoLuong.Text))
-            {
-                MessageBox.Show("vui lòng nhập số lượng trước khi lưu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+           
             if (string.IsNullOrEmpty(txtPrice.Text))
             {
                 MessageBox.Show("vui lòng nhập số tiền trước khi lưu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            int quantity=int.Parse(txtSoLuong.Text);
+           
             decimal price=decimal.Parse(txtPrice.Text);
             int pro_id=int.Parse(cboProduct.SelectedValue.ToString());
             int size_id = int.Parse(cboSize.SelectedValue.ToString());
@@ -210,11 +206,7 @@ namespace CoffeeHouse_Winform
                 return;
             }
 
-            if(string.IsNullOrEmpty(txtSoLuong.Text))
-            {
-                MessageBox.Show("Nhập số lượng trước khi lưu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            } 
+          
             if(string.IsNullOrEmpty(txtPrice.Text))
             {
                 MessageBox.Show("Nhập giá trước khi lưu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -233,7 +225,7 @@ namespace CoffeeHouse_Winform
             {
                 Pro_Id = pro_id,
                 Size_Id = size_id,
-                Quantity = quantity,
+                Quantity = 0,
                 Price = price,
             };
           
@@ -338,7 +330,7 @@ namespace CoffeeHouse_Winform
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow selectedRow = dgDSSP.Rows[e.RowIndex];
-                txtSoLuong.Text = selectedRow.Cells["Quantity"].Value.ToString();
+               
                 txtPrice.Text = selectedRow.Cells["Price"].Value.ToString();
             }
         }
@@ -347,12 +339,7 @@ namespace CoffeeHouse_Winform
         private void btnfix_Click(object sender, EventArgs e)
         {
             DataGridViewRow selectedRow = dgDSSP.SelectedRows[0];
-            int quantity;
-            if(string.IsNullOrEmpty(txtSoLuong.Text))
-            {
-               quantity = 0;
-            }    
-            quantity = int.Parse(txtSoLuong.Text);
+           
             string Name = selectedRow.Cells["ProName"].Value.ToString();
             int pro_id = int.Parse(selectedRow.Cells["Pro_Id"].Value.ToString());
             string Size = selectedRow.Cells["SizeName"].Value.ToString();
@@ -371,7 +358,7 @@ namespace CoffeeHouse_Winform
 
                 try
                 {
-                    bool isUpdate = provar.updateProductVariant(id,quantity,price);
+                    bool isUpdate = provar.updateProductVariant(id,price);
 
                     if (isUpdate)
                     {

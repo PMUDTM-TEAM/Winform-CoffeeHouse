@@ -100,6 +100,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_ADMIN_WAREHOUSE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ADMIN_WAREHOUSE.Designer.cs">
+      <DependentUpon>UC_ADMIN_WAREHOUSE.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_ADMIN_PRODUCTVARIANT.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,6 +151,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UC_ADMIN_WAREHOUSE.resx">
+      <DependentUpon>UC_ADMIN_WAREHOUSE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_ADMIN_PRODUCTVARIANT.resx">
       <DependentUpon>UC_ADMIN_PRODUCTVARIANT.cs</DependentUpon>
     </EmbeddedResource>
