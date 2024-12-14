@@ -27,7 +27,7 @@ Web: ASP.NET Core MVC.
 
 Ngôn ngữ: C#.
 
-Framework: Bootstrap, ASP.NET Core.
+Framework: ASP.NET Core.
 
 Database: SQL Server.
 
@@ -58,32 +58,24 @@ Tích hợp giữa giao diện web và ứng dụng WinForm trong hệ thống C
               <tr>
                 <td>1</td>
                 <td>Quản lý danh mục</td>
-                <td></td>
+                <td>Nguyễn Trương Điền</td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>Quản lý sản phẩm</td>
-                <td></td>
+                <td>Nguyễn Trương Điền</td>
             </tr>
-             <tr>
+           
+           
+         <tr>
                 <td>3</td>
-                <td>Quản lý topping</td>
-                <td></td>
+                <td>Quản lý kho</td>
+                <td>Nguyễn Trương Điền</td>
             </tr>
             <tr>
                 <td>4</td>
-                <td>Quản lý size</td>
-                <td></td>
-            </tr>
-         <tr>
-                <td>5</td>
-                <td>Quản lý kho</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>5</td>
                 <td>Quản lý đơn hàng</td>
-                <td></td>
+                <td>Phạm Trần Quang Thắng</td>
             </tr>
         </tbody>
     </table>
