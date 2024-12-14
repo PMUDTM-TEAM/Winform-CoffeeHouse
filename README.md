@@ -65,9 +65,7 @@ Tích hợp giữa giao diện web và ứng dụng WinForm trong hệ thống C
                 <td>Quản lý sản phẩm</td>
                 <td>Nguyễn Trương Điền</td>
             </tr>
-           
-           
-         <tr>
+            <tr>
                 <td>3</td>
                 <td>Quản lý kho</td>
                 <td>Nguyễn Trương Điền</td>
