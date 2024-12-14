@@ -55,23 +55,28 @@ Tích hợp giữa giao diện web và ứng dụng WinForm trong hệ thống C
             </tr>
         </thead>
         <tbody>
-              <tr>
+         <tr>
                 <td>1</td>
+                <td>Đăng nhập phân quyền</td>
+                <td>Phạm Trần Quang Thắng</td>
+            </tr>
+              <tr>
+                <td>2</td>
                 <td>Quản lý danh mục</td>
                 <td>Nguyễn Trương Điền</td>
             </tr>
             <tr>
-                <td>2</td>
+                <td>3</td>
                 <td>Quản lý sản phẩm</td>
                 <td>Nguyễn Trương Điền</td>
             </tr>
             <tr>
-                <td>3</td>
+                <td>4</td>
                 <td>Quản lý kho</td>
                 <td>Nguyễn Trương Điền</td>
             </tr>
             <tr>
-                <td>4</td>
+                <td>5</td>
                 <td>Quản lý đơn hàng</td>
                 <td>Phạm Trần Quang Thắng</td>
             </tr>
