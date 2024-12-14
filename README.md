@@ -75,6 +75,11 @@ Tích hợp giữa giao diện web và ứng dụng WinForm trong hệ thống C
                 <td>Quản lý size</td>
                 <td></td>
             </tr>
+         <tr>
+                <td>5</td>
+                <td>Quản lý kho</td>
+                <td></td>
+            </tr>
             <tr>
                 <td>5</td>
                 <td>Quản lý đơn hàng</td>
