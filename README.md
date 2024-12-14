@@ -23,7 +23,7 @@
 
 + **Công nghệ sử dụng**
 
-Web: ASP.NET Core MVC.
+Thư viện: Guna.UI2.
 
 Ngôn ngữ: C#.
 
