@@ -72,8 +72,8 @@ Tích hợp giữa giao diện web và ứng dụng WinForm trong hệ thống C
             </tr>
             <tr>
                 <td>4</td>
-                <td>Quản lý kho</td>
-                <td>Nguyễn Trương Điền</td>
+                <td>Quản lý kho nguyên liệu</td>
+                <td>Phạm Trần Quang Thắng</td>
             </tr>
             <tr>
                 <td>5</td>
